@@ -1,24 +1,22 @@
-name: Waka Readme
+name: metrics
 
 on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - main
+
 jobs:
-  update-readme:
-    name: Update Readme with Metrics
+  github-readme-metrics:
+    name: Update GitHub Readme with Metrics
     runs-on: ubuntu-latest
+    environment:
+      name: Production
+    permissions:
+      contents: write
     steps:
-      - uses: anmol098/waka-readme-stats@master
+      - uses: lowlighter/metrics@latest
         with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_OS: "True"
-          SHOW_PROJECTS: "True"
-          SHOW_UPDATED_DATE: "True"
-          UPDATED_DATE_FORMAT: "%Y/%m/%d %H:%M:%S"
-          SHOW_LINES_OF_CODE: "True"
-          SHOW_TOTAL_CODE_TIME: "True"
-          SHOW_PROFILE_VIEWS: "True"
-          SHOW_EDITORS: "True"
-          SHOW_LANGUAGE_PER_REPO: "True"
+          token: ${{ secrets.GH_TOKEN }}
