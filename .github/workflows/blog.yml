@@ -5,6 +5,9 @@ on:
   schedule:
     # Once every Sunday
     - cron: 0 0 * * 0
+  push:
+    branches:
+      - main
 
 jobs:
   update:
