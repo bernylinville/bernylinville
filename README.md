@@ -21,11 +21,7 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Markdown    17 mins         █████████████░░░░░░░░░░░░   51.89 %
-Other       9 mins          ███████░░░░░░░░░░░░░░░░░░   28.25 %
-Bash        4 mins          ███▒░░░░░░░░░░░░░░░░░░░░░   13.05 %
-Smarty      1 min           █░░░░░░░░░░░░░░░░░░░░░░░░   03.42 %
-Java        0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.94 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
